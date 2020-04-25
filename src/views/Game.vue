@@ -87,6 +87,15 @@ export default {
     if(this.boardWidth === undefined || this.boardHeight === undefined || this.mines === undefined ){
       this.$router.go(-1);
     }
+  },
+
+  watch: {
+    isWin: function () {
+      if(this.isWin){
+        let winner = prompt("You have won! Write your name:");
+        winner;
+      }
+    }
   }
 }
 </script>

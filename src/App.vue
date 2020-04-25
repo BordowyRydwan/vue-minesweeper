@@ -9,14 +9,7 @@
 
 export default {
   name: 'App',
-
-  data(){
-    return{
-      boardWidth: 10,
-      boardHeight: 10,
-      mines: 20,
-    }
-  },
+  
   mounted(){
     const el = document.querySelector("#app");
 
