@@ -139,6 +139,8 @@ export default {
       font-size: 0.8rem;
       transition-duration: .3s;
 
+      cursor: pointer;
+
       &:hover{
         transform: scale(0.95);
       }

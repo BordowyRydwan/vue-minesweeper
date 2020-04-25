@@ -192,6 +192,7 @@ export default {
     justify-content: center;
     align-items: center;
     font-weight: bold;
+    cursor: pointer;
 
     background-color: rgb(196, 195, 195); 
     border-radius: 20%;

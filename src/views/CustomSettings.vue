@@ -8,12 +8,12 @@
 
     <div class="custom__option">
       <label for="height">Height: </label>
-      <input type="number" name="width" id="height" min="5" max="20" v-model="height">
+      <input type="number" name="heigth" id="height" min="5" max="30" v-model="height">
     </div>
 
     <div class="custom__option">
       <label for="mines">Mines: </label>
-      <input type="number" name="width" id="mines" min="5" :max="width * height - 1" v-model="mines">
+      <input type="number" name="mines" id="mines" min="5" :max="width * height - 1" v-model="mines">
     </div>
   
     <div class="custom__buttons">
@@ -113,6 +113,7 @@ export default {
 
     a:nth-child(2) button{
       background-color: #f1f1f1;
+      font-weight: normal;
     }
   }
 

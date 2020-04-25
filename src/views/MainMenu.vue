@@ -34,7 +34,7 @@
       </router-link>
       <router-link to="/custom">
         <div class="menu__option custom">
-          <p>CUSTOM GAME</p>
+          <p>CUSTOM <br/> MODE</p>
         </div>
       </router-link>
     </div>
@@ -55,7 +55,7 @@ export default {
       text-align: center;
       margin-bottom: 10vh;
 
-      font-size: 3rem;
+      font-size: 3.5rem;
       text-shadow: 3px 3px 5px gray;
     }
 
@@ -78,6 +78,7 @@ export default {
     height: 30vh;
     width: 30vh;
     border-radius: 10px;
+    overflow-wrap: break-word;
 
     margin: 0 4vh 5vh 4vh;
 
@@ -92,6 +93,7 @@ export default {
     box-shadow: 4px 5px 2px gray;
 
     transition-duration: 0.3s; 
+    cursor: pointer;
 
     &:hover{
       transform: scale(0.95);
@@ -103,6 +105,9 @@ export default {
 
     p:first-child{
       margin-bottom: 25%;
+      font-size: 1.6rem;
+      text-shadow: 0px 1px 1px rgb(49, 49, 49);
+      text-align: center;
     }
   }
 
