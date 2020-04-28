@@ -20,8 +20,8 @@ export default {
   },
   computed: {
     tileHeight: function () {
-      const h = Math.floor(window.innerHeight / (this.$parent.boardHeight) * 0.85);
-      const w = Math.floor(window.innerWidth / (this.$parent.boardWidth * 0.85));
+      const h = Math.floor(((window.innerHeight - this.$parent.isMobile * 100) / this.$parent.boardHeight) * 0.8);
+      const w = Math.floor(((window.innerWidth - !this.$parent.isMobile * 30) / this.$parent.boardWidth) * 0.8);
 
       return  Math.min(w, h); 
     },
@@ -65,7 +65,7 @@ export default {
       if(value === '*'){
 
         for(let j = 1; j < this.$parent.boardHeight + 1; ++j){
-          for(let i = 1; i < this.$parent.boardHeight + 1; ++i){
+          for(let i = 1; i < this.$parent.boardWidth + 1; ++i){
 
             const endValue = this.getSolutionTile(i, j);
 
@@ -186,7 +186,7 @@ export default {
     width: 25px;
     height: 25px;
 
-    margin: 2px;
+    margin: 0.5px;
 
     display: flex;
     justify-content: center;
@@ -194,7 +194,7 @@ export default {
     font-weight: bold;
     cursor: pointer;
 
-    background-color: rgb(196, 195, 195); 
+    background-color: rgb(179, 179, 179); 
     border-radius: 20%;
 
     &:hover{

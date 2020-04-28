@@ -3,12 +3,12 @@
     <h2>CUSTOM SETTINGS</h2>
     <div class="custom__option">
       <label for="width">Width: </label>
-      <input type="number" name="width" id="width" min="5" max="40" v-model="width">
+      <input type="number" name="width" id="width" min="5" :max="maxWidth" v-model="width">
     </div>
 
     <div class="custom__option">
       <label for="height">Height: </label>
-      <input type="number" name="heigth" id="height" min="5" max="30" v-model="height">
+      <input type="number" name="heigth" id="height" min="5" :max="maxHeight" v-model="height">
     </div>
 
     <div class="custom__option">
@@ -41,7 +41,10 @@ export default {
     return{
       width: 5,
       height: 5,
-      mines: 5
+      mines: 5,
+
+      maxWidth: Math.floor(((window.innerWidth - 100) / 20) * 0.8) - 1,
+      maxHeight: Math.floor(((window.innerHeight - 100) / 20) * 0.8) - 1,
     }
   }
 }

@@ -5,6 +5,7 @@
       :boardHeight="boardHeight"
       :mines="mines"
       :isPaused="isPaused"
+      :isMobile="isMobile"
       ref="board"
 
       @isWin="checkIfWin"
@@ -56,6 +57,7 @@ export default {
       isPaused: false,
       isWin: false,
       isLost: false,
+      isMobile: window.innerWidth < 600,
       flags: 0,
     }
   },
@@ -80,22 +82,25 @@ export default {
     pause: function () {
       this.isPaused = !this.isPaused;
     }
-
   },
 
   mounted(){
     if(this.boardWidth === undefined || this.boardHeight === undefined || this.mines === undefined ){
       this.$router.go(-1);
     }
+
+    window.addEventListener('resize', () => {
+      this.isMobile = window.innerWidth < 600;
+    });
   },
 
   watch: {
     isWin: function () {
       if(this.isWin){
-        let winner = prompt("You have won! Write your name:");
+        let winner = alert("Congrats! You have won!");
         winner;
       }
-    }
+    },
   }
 }
 </script>
@@ -122,6 +127,7 @@ export default {
 
   .game__panel__flags{
     display: flex;
+    flex-direction: column;
     align-items: center;
 
     img{
@@ -129,7 +135,7 @@ export default {
     }
 
     p{
-      margin-left: 20px;
+      margin-top: 7px;
     }
   }
 
@@ -139,7 +145,7 @@ export default {
 
     button{
       box-shadow: 2px 2px 1px rgba(0, 0, 0, .25);
-      background-color: #83df4e;
+      background-color: #fffb24;
       color: #000;
       border-radius: 6px;
       padding: 4px 10px;
@@ -157,7 +163,24 @@ export default {
       &:disabled{
         background-color: #cccccc;
         color: rgb(68, 68, 68);
+        cursor: default;
       }
+    }
+  }
+
+  @media (max-width: 600px){
+    .game{
+      flex-direction: column;
+    }
+
+    .game__panel{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      width: 90vw;
+
+      padding: 20px 0px;
     }
   }
 

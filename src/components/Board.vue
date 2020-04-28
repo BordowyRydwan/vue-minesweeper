@@ -25,7 +25,8 @@ export default {
     boardWidth: Number,
     boardHeight: Number,
     mines: Number,
-    isPaused: Boolean
+    isPaused: Boolean,
+    isMobile: Boolean,
   },
   data(){
     return{
@@ -163,7 +164,9 @@ export default {
 
   .board{
     padding: 10px;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     z-index: 1;
     position: relative;
     background-color: white;
@@ -184,7 +187,6 @@ export default {
     font-size: 2rem;
     font-weight: bold;
 
-    transform: translateX(-10px) translateY(-10px);
     position: absolute;
     background-color: rgb(179, 179, 179);
   }
