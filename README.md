@@ -1,24 +1,13 @@
-# vue-minesweeper
+# Minesweeper
+Welcome to my implementation of Minesweeper, popular game coming from Windows systems
 
-## Project setup
-```
-npm install
-```
+## Features
+- 3 game modes
+- full implementation of RWD
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Design overview
+![Display](design.png)
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Link
+https://bordowyrydwan.github.io/vue-minesweeper/#/
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
