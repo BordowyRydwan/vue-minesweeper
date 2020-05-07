@@ -9,15 +9,6 @@
 
 export default {
   name: 'App',
-  
-  mounted(){
-    const el = document.querySelector("#app");
-
-    el.addEventListener("mousemove", (e) => {
-      el.style.backgroundPositionX = -e.offsetX * 0.015 + "px";
-      el.style.backgroundPositionY = -e.offsetY * 0.015 + "px";
-    });
-  }
 }
 </script>
 

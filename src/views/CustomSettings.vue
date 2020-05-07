@@ -3,17 +3,17 @@
     <h2>CUSTOM SETTINGS</h2>
     <div class="custom__option">
       <label for="width">Width: </label>
-      <input type="number" name="width" id="width" min="5" :max="maxWidth" v-model="width">
+      <input type="number" name="width" id="width" min="5" :max="maxWidth" v-model.number="width">
     </div>
 
     <div class="custom__option">
       <label for="height">Height: </label>
-      <input type="number" name="heigth" id="height" min="5" :max="maxHeight" v-model="height">
+      <input type="number" name="heigth" id="height" min="5" :max="maxHeight" v-model.number="height">
     </div>
 
     <div class="custom__option">
       <label for="mines">Mines: </label>
-      <input type="number" name="mines" id="mines" min="5" :max="width * height - 1" v-model="mines">
+      <input type="number" name="mines" id="mines" min="5" :max="width * height - 1" v-model.number="mines">
     </div>
   
     <div class="custom__buttons">
